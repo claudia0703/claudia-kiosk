@@ -41,6 +41,20 @@ export default function AdminScreen() {
         }
 
     }
+    
+      const setCurrentQuantity= async (product, action, quantity) => {
+        try{
+            await axios.put('api/products/' + product._id,{
+                action: action,
+                quantity: quantity,
+            })
+        }catch(err)
+        {
+            alert(err.message);
+        }
+    }
+
+
 
 
     return (
