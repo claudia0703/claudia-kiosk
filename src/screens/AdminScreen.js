@@ -15,8 +15,7 @@ export default function AdminScreen() {
     //novo
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState({});
-    const [CurrentQuantity, setCurrentQuantity] = useState({}); //Teve de ser adicionado
-
+   
     useEffect(() => {
         listOrders(dispatch);
     }, [dispatch]);
